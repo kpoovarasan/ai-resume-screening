@@ -57,24 +57,3 @@ PyPDF2 / docx
 
 Git & GitHub
 
-📁 Project Structure
-ai-resume-screening/
-│
-├── app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-├── templates/
-│   ├── home.html
-│   └── result.html
-│
-├── static/
-│   ├── style.css
-│   └── images/
-│
-└── utils/
-    ├── text_extractor.py
-    ├── preprocess.py
-    ├── similarity.py
-    └── gemini_skill_generator.py
