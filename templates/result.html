@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="result-container">
+
+    <h1>📊 Resume Analysis Result</h1>
+
+    <div class="score-card">
+        <p>Match Score</p>
+        <h2>{{ result.score }}%</h2>
+    </div>
+
+    <div class="skills-grid">
+        <div class="skill-box">
+            <h3>✅ Matched Skills</h3>
+
+            {% if result and result.matched %}
+                {% for s in result.matched %}
+                    <span class="chip green">{{ s }}</span>
+                {% endfor %}
+            {% else %}
+                <p>No matched skills found</p>
+            {% endif %}
+        </div>
+
+        <div class="skill-box">
+            <h3>❌ Missing Skills</h3>
+
+            {% if result and result.missing %}
+                {% for s in result.missing %}
+                    <span class="chip red">{{ s }}</span>
+                {% endfor %}
+            {% else %}
+                <p>No missing skills found</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <a href="/" class="back-btn">⬅ Analyze Another Resume</a>
+
+</div>
+
+</body>
+</html>

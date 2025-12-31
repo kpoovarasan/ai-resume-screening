@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Screening</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="center-wrapper">
+    <div class="content-box">
+
+        <h1>AI Resume Screening System</h1>
+
+        <p class="subtitle">
+            Analyze resumes intelligently using Transformer-based AI models.
+            Match candidates with job requirements in seconds.
+        </p>
+
+        <form method="POST" enctype="multipart/form-data" action="/analyze" class="card">
+
+            <label>📄 Upload Resume</label>
+            <input type="file" name="resume" required>
+
+            <label>🧾 Job Description</label>
+            <textarea name="jd" rows="5"
+                placeholder="Paste job description here..." required></textarea>
+
+            <button type="submit">Analyze Resume</button>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
