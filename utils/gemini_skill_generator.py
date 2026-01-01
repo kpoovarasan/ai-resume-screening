@@ -3,7 +3,7 @@ from google import genai
 import os
 
 # Create client (NEW SDK)
-client = genai.Client(api_key=os.getenv("AIzaSyB2KfPXRzxAW2s1SkalVtAAKE-bulY3qvM"))
+client = genai.Client(api_key=os.getenv("AIzaSyB2KfPXRzxAW2s1SkalVtAAKE-bul*****"))
 
 
 def generate_skills_from_role(role: str):
